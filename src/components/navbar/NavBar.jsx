@@ -3,30 +3,35 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../cartwidget/CartWidget.jsx';
+import { NavLink } from 'react-router-dom';
 
 function NavBarComp() {
   return (
+    <div>
     <Navbar expand="md" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home"> <img src="./images/logo.png" width="250"
+        <Navbar.Brand as={NavLink} to='/' > <img src="../images/logo.png" width="250"
               height="200" alt="logo" /> </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Cine y Series</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={NavLink} to='/cetegories/Cine y Series'>Cine y Series</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/categories/Videojuegos'>
                 Videojuegos
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Retro</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/cetegories/Retro'>Retro</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <CartWidget/>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar> 
+    <hr/>
+    </div>
   );
+  
 }
 
 export default NavBarComp;
