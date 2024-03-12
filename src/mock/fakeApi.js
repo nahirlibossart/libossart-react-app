@@ -48,7 +48,7 @@ const productos = [
         id:'6',
         name:'Remera Pumper Nic',
         stock:15,
-        price:20.000,
+        price:20000,
         description:'Remera de algodón peinado con estampado',
         image:'https://i.postimg.cc/J7dj0zrx/pumper.webp',
         category:'Retro'
@@ -64,6 +64,6 @@ export const getProducts =() => {
             }else{
                 resolve(productos)
             }
-        },1000)
+        },2000)
     })
 }

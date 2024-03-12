@@ -17,11 +17,11 @@ function NavBarComp() {
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
-              <NavDropdown.Item as={NavLink} to='/cetegories/Cine y Series'>Cine y Series</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/categories/Cine y Series'>Cine y Series</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/categories/Videojuegos'>
                 Videojuegos
               </NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='/cetegories/Retro'>Retro</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/categories/Retro'>Retro</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <CartWidget/>
