@@ -24,14 +24,15 @@ function NavBarComp() {
               <NavDropdown.Item as={NavLink} to='/categories/Retro'>Retro</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <NavLink to='/cart' className="text-decoration-none">
           <CartWidget/>
+          </NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar> 
     <hr/>
     </div>
   );
-  
 }
 
 export default NavBarComp;

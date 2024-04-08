@@ -1,11 +1,15 @@
 import { PiShoppingCartFill } from "react-icons/pi";
 import Badge from 'react-bootstrap/Badge';
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-const CartWidget = () => {
+const CartWidget = ({counter}) => {
+    const {cartQuantity} = useContext(CartContext)
+    
     return(
         <>
-        <PiShoppingCartFill fontSize={'2rem'} />
-        <Badge bg="warning">1</Badge>
+        <PiShoppingCartFill color='black' fontSize={'2rem'} />
+        {cartQuantity() > 0 && <Badge bg="warning">{cartQuantity()}</Badge>}
          </>
     )
 }

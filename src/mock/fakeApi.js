@@ -2,7 +2,7 @@ const productos = [
     {
         id:'1',
         name:'Remera Baby Yoda',
-        stock:50,
+        stock:4,
         price:20000,
         description:'Remera de algodón peinado con estampado',
         image:'https://i.postimg.cc/Y2P0FN3w/baby-yoda.webp',
